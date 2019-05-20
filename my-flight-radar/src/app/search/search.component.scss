@@ -1,4 +1,44 @@
+// Small smartphones 
+$screen-sm-max: 576px;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+// Large tablets and desktops
+$screen-xl-min: 1400px;
 
+// XSmall devices
+@mixin xs {
+    @media (max-width: #{$screen-sm-max}) {
+        @content;
+    }
+ }
+// Small devices
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+ // Medium devices
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ // Large devices
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ // Extra large devices
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
 
 .title {
     text-align: center;
@@ -8,37 +48,68 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 .first_row {
     margin-top: 2%;
-
+    @include lg {
+        height: 180px;  
+     }     
+     @include md {
+        height: 180px;
+     }
+     @include sm {
+        height: 180px;
+        display: inline-block;
+        text-align: center;
+     }
+     @include xs {
+        height: 180px;
+        display: inline-block;
+        text-align: center;
+     }
+    .first_element {
+     //   margin: 3%;
+        margin-left: 10%;
+        max-width: 200px;
+      }
+        
+      .second_element {
+      //  margin: 3%;
+        margin-left: 10%;
+        max-width: 200px; 
+      }
 }
-
-  .first_element {
-    margin: 3%;
-    max-width: 200px;
-  }
-
-    
-  .second_element {
-    margin: 3%;
-    max-width: 200px; 
-  }
-
 
 .second_row {
+    @include lg {
+        height: 180px;
+     }
+     @include md {
+        height: 180px;
+     }
+     @include sm {
+        height: 180px;
+        display: inline-block;
+        text-align: center;
+     }
+     @include xs {
+        height: 180px;
+        display: inline-block;
+        text-align: center;
+     }
     .first_element {
-        margin: 3%;
+       // margin: 3%;
+        margin-left: 10%;
         max-width: 200px;
     }
+    .second_element {
+       // margin: 3%;
+        margin-left: 10%;
+        max-width: 200px; 
+    }
+   
 }
-  
 
-.second_element {
-    margin: 3%;
-    max-width: 200px; 
-}
-
+// TODO: responsive button design !!!
 
 button {
     cursor: pointer;
@@ -48,8 +119,6 @@ button {
     border-radius: 1%;
 }
    
-
 .end {
     text-align: center;
-
 }
