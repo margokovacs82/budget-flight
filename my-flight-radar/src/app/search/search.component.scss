@@ -1,0 +1,55 @@
+
+
+.title {
+    text-align: center;
+    background-color: blue;
+    color: white;
+    min-height: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.first_row {
+    margin-top: 2%;
+
+}
+
+  .first_element {
+    margin: 3%;
+    max-width: 200px;
+  }
+
+    
+  .second_element {
+    margin: 3%;
+    max-width: 200px; 
+  }
+
+
+.second_row {
+    .first_element {
+        margin: 3%;
+        max-width: 200px;
+    }
+}
+  
+
+.second_element {
+    margin: 3%;
+    max-width: 200px; 
+}
+
+
+button {
+    cursor: pointer;
+    width: 54%;
+    height: 40px;
+    font-size: large;
+    border-radius: 1%;
+}
+   
+
+.end {
+    text-align: center;
+
+}
